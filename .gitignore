@@ -1,0 +1,18 @@
+.idea
+*.pyc
+*~
+db.sqlite3
+env/*
+actions_prices/production.py
+docker-compose.yml
+Dockerfile
+enable_mod_deflate.conf
+Jenkinsfile
+run_web.sh
+wsgi.conf
+
+# Elastic Beanstalk Files
+.ebextensions/*
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

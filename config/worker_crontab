@@ -1,0 +1,2 @@
+00 13 * * 1-5 bash -l -c 'source /opt/python/current/env ; cd /opt/python/current/app/ ; python manage.py update_tickers'
+00 22 * * 1-5 bash -l -c 'source /opt/python/current/env ; cd /opt/python/current/app/ ; python manage.py update_tickers_historical'
