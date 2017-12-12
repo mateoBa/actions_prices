@@ -79,14 +79,21 @@ WSGI_APPLICATION = 'actions_prices.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'prices_server_bd',
+#         'USER': 'basa',
+#         'PASSWORD': 'prices',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'prices_server_bd',
-        'USER': 'basa',
-        'PASSWORD': 'prices',
-        'HOST': 'localhost',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -166,9 +173,9 @@ CHANNEL_LAYERS = {
     },
 }
 
-logging.basicConfig(filename='/opt/python/log/ticker-server.log')
+# logging.basicConfig(filename='/opt/python/log/ticker-server.log')
 
-QUANDL_API_TOKEN = os.environ['QUANDL_API_TOKEN']
+# QUANDL_API_TOKEN = os.environ['QUANDL_API_TOKEN']
 PERCENTAGE_DIFFERENCE_TO_SEND_ALERT = 40
 
 MANAGERS_EMAIL = [
